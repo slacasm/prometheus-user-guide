@@ -1,0 +1,7 @@
+# Introduction
+
+This book is intended as an unofficial user-guide for the *Prometheus* fire growth modelling software, specific to version 2023.06.01, as of June 1st, 2023. This is the End of Life (EOL) version and final officially released version of the software. In this book, we will cover breadth of topics related to *Prometheus*, with the goal of enabling broader usage of this tool and to catalogue the known but unwritten issues, bugs, errors, and outright confusing aspects of the software. *Prometheus* is and has been a valuable tool for Canadian wildland fire[^intro-1] managers since its initial release, and we expect that it will continue to be used many years into the future, despite newer and more impactful software being developed. However, it is also possible that *Prometheus* usage will entirely disappear in an operational and research context in the near future. In either case, it will be important to document and describe how this software functioned, how to use it, and most critically, how to resolve the myriad issues inherent to *Prometheus*.
+
+[^intro-1]: While many terms, I choose to use wildland fire. Forest fire, brush fire, bush fire, wildfire, grass fire, whatever term you prefer, I am generally referring to that.
+
+*Prometheus* is a deterministic wildland fire growth modelling software that is based around the *Canadian Forest Fire Danger Rating System (CFFDRS),* utilizing the *Fire Weather Index (FWI)* and the *Fire Behaviour Prediction (FBP)* systems to predict potential fire growth.
