@@ -73,7 +73,7 @@ This section covers the creation of a weather station, adding a weather stream, 
 
 [^quick-reference-2]: The most common method to obtain real-time weather files for usage in *Prometheus* is through the use of spotwx.com. You can directly obtain *Prometheus* formatted input files for many weather models here.
 
-## Scenario Set-up 
+## Scenario Set-up
 
 This section covers setting up a `Scenario` from which to produce a fire growth model output.
 

@@ -9,6 +9,7 @@ book:
   chapters:
     - index.qmd
     - summary.qmd
+    - quick-reference.qmd
     - intro.qmd
     - installation.qmd
     - data-gathering-formatting.qmd
