@@ -1,0 +1,43 @@
+# Installation & Set-up
+
+*Prometheus* is free software that anyone can install with the correct computer. Obtain the necessary files here: <https://firegrowthmodel.ca/#/prometheus_software>. *Prometheus* can operate on most Windows based computers, with verified functionality on Windows Vista - Windows 11.
+
+Please take some time to read this website, specifically the *Prometheus* software sections. Some useful documentation can be found under the Documentation page.
+
+*Prometheus* can be run on the vast majority of personal computers and does not require a powerful workstation to function. Depending on what you aim to use the software for, the software may become less performant. Very complex fire simulations with heavy data will reduce software performance and can greatly overtax your computer. Be mindful of what you do; the software will run what you ask of it.
+
+A few additional installations are required in advance of *Prometheus* set-up. A specific Intel Redist (which is a set of runtime library files) is required for *Prometheus* to function[^installation-1]. In addition, a Java Runtime is required (v1.8.0) and can be obtained here: <https://www.java.com/en/download/manual.jsp>
+
+[^installation-1]: Intel hardware is **not** required for *Prometheus*, the Intel Redist is not hardware locked.
+
+*Prometheus* requires a specific **Intel Redist version*.*** The software will not be installed without this and the user is required to ensure this is present on their machine. The correct version can be found on the firegrowthmodel.ca website currently. The required file is **Intel C++ runtime 2021.3.0.3372.**
+
+This is a hard requirement. You cannot bypass this requirement and run *Prometheus*.
+
+During installation of *Prometheus,* if either requirement is not found, the installation will not continue. It is also suggested that the user reboot their computer *after* installation of both the Java and Intel components and prior to completing *Prometheus* installation.
+
+## Verify Path Settings
+
+Post-installation, check and verify what path has been set for the *Prometheus* software. *Prometheus* has known conflicts, notably with other installations of GDAL, which can lead to frustrating and unclear issues. On a Windows machine, press the Windows key or the Windows icon to open the search bar. Type,\
+"Environment" and two options should populate, "*Edit the system environment variables."* or *"Edit environment variables for your account."*
+
+Administrative privileges may be required depending on your user/corporate settings to view and edit environment variables. You should see a window similar to this,
+
+![](images/clipboard-590267188.png)
+
+Select the **Environment Variables** option near the bottom right. A window similar to this should open,
+
+![](images/clipboard-666687807.png)
+
+In the **System Variables** section, look for the *Variable* `GDAL_DATA` first. The *Value* should be similar to,\
+`C:\Program Files\Prometheus\gdal-data\`
+
+Verify that this is correctly set. Next, search in the same list for the *Variable* `PROJ_LIB`. The *Value* should be similar to,
+
+`C:\Program Files\Prometheus\proj_nad\`
+
+Verify that this is correctly set. If so, *Prometheus* should be ready for usage.
+
+### Troubleshooting Paths
+
+In some cases, both `GDAL_DATA` and `PROJ_LIB` may point to other paths, such as an `OSGEO` installation as a part of QGIS. In order to properly utilize both *Prometheus* and other spatial software, the user may occasionally be required to re-direct the path destination directly. If either `GDAL_DATA` or `PROJ_LIB` are elsewhere, we recommend you copy those locations to a separate text file for future use and update them to be the required *Prometheus* paths noted above (ensure your directories are aligned).

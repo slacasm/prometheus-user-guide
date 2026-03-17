@@ -1,0 +1,46 @@
+# Input Data: Gathering and Formatting
+
+Generally, a successful fire growth model will require several inputs to properly operate. The common inputs are: fuel data, weather data, and topography data. In *Prometheus*, these are represented as either raster or vector based data. A variety of possible inputs and file formats exist for *Prometheus:*
+
+1.  Landscape / Topographic
+    i.  Fuel Data
+        a.  Fuel data for *Prometheus* must be in raster format and follow a specific fuel assignment as a default. The user can supply a Fuel Look-Up Table (LUT) if their raster data follows a different format.
+            b.  *Fuel Patches* are an optional input that will be covered in further detail below.
+    ii. Elevation Data
+        a.  Elevation data for *Prometheus* must be in raster format. Generally, a user will obtain a Digital Elevation Model (DEM) or similar product to represent the topography in their landscape.
+    iii. Slope & Aspect Data
+         i.  Slope and Aspect grids can both be provided if desired for usage in *Prometheus.* They must match the same format and extent of the Fuel and Elevation data.
+    iv. Degree of Curing (%)
+        i.  A Grid containing percent curing values. This grid must be of the same extent and format as the Fuel layer. This is primarily used to influence Grass fire behaviour through curing estimates.
+    v.  Green-Up
+        i.  A grid that denotes whether a given cell should be labeled "Green". This is generally applied for the D-1 Leafless Aspen, M-1 Mixedwood-Leafless, and M-3, Dead Balsam Fir Mixedwood–Leafless fuel types, indicating that they should instead utilize the D-2 Green Aspen, M-2 Mixedwood-Green, and the M-4 Dead Balsam Fir Mixedwood–Green fuel types, respectively.
+    vi. Percent Conifer
+        i.  Optional input that can be used to refine the Mixedwood classification.
+    vii. Percent Dead Fir
+         i.  Optional input that can be used to refine the Dead Balsam Fir Mixedwood fuel types.
+    viii. Crown Base Height
+          i.  These data specifically operate for the C-6 Conifer Plantation fuel type and can be used to better adjust and refine fire behaviour in these fuels where data exists.
+    ix. Tree Height
+        i.  ?
+    x.  Fuel Load
+        i.  ?
+2.  Weather / Meteorological
+    i.  Weather Station
+        a.  Weather stations are manually added to the project in *Prometheus*. By default, a new weather station will be placed at the center of your project data geographically, but can be altered through adjusting the coordinates. Weather stations can be added that do not fall within the extent of your project data.
+        b.  Weather stations are how the user inputs weather streams to provide weather inputs for use in the fire growth model.
+        c.  Weather streams will be covered in more depth in the ***Weather Section***.
+    ii. Weather Patches & Weather Grids
+        i.  Weather patches and grids are utilized to better model and reflect topographical influence on wind in *Prometheus.* Patches represent smaller areas for better modelling while weather grids are built off of the elevation data and must match the input elevation layer extent. Weather grids can be created through the usage of the *Wind Ninja* software, which will be covered in a later section for advanced usage.
+3.  Ignition Data
+    i.  Several options exist to input ignitions in *Prometheus.* The user can manually draw and add either point, line, or polygon ignitions natively within *Prometheus* or they can upload data directly from other sources in point, line, or polygon format, but the data must be in a vector format.
+        a.  *Prometheus* accepts Shapefile (.shp) and Keyhole Markup Language / Keyhole Markup Zipped (.kml, .kmz) file types for ignition data.
+
+At an absolute minimum, *Prometheus* requires a raster Fire Behaviour Prediction (FBP) Fuel Type (FT) input layer (we will use the term fuel layer from here out). Three file formats are accepted for raster data in *Prometheus:* GeoTIFF (.tif, .tiff), ASCII (.asc), and text (.txt). The most common file type that users will encounter is a standard GeoTIFF, which is the most common raster format in present geospatial usage. There are several options to obtain or create a fuel layer for usage in *Prometheus.* Some specific requirements must be met otherwise the layer will not be imported correctly.
+
+Throughout the next sections, we will describe how to obtain and format data for usage in *Prometheus.*
+
+## Fuel Data
+
+Obtaining fuel data for *Prometheus* is currently easier and more accessible than ever, though this data is not always the best available due to a variety of challenges and limitations. The Canadian Forest Service (CFS) produces a national Fire Behaviour Prediction (FBP) Fuel Type (FT) layer for all of Canada, which is what we will cover in this section. This layer is based on remotely sensed data and is developed through a rule-set application to attempt to best reflect expected fire behaviour in Canada. Other fuel type datasets exist but are often not easily accessible. The basic concepts covered in this section will apply for the creation and usage of other fuel type data where a user may have it available.
+
+### Obtaining Fuel Data via R

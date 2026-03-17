@@ -1,7 +1,7 @@
 # Summary
 
-In summary, this book has no content whatsoever.
+**This is an unofficial guide and is a work in progress. There may be errors and incorrect aspects within this work. Use at your own risk. This is a work in progress.**
 
-```{r}
-1 + 1
-```
+This guide is intended to support users in installation and usage of the *Prometheus* fire growth modelling software, specifically version 2023.06.01 (End of Life (EOL)). This document also covers common challenges and issues to ensure these are captured for any future use or replication of past results using this software. Additionally, we provide support and guidance on obtaining and formatting data required to utilize *Prometheus.*
+
+This guide is an unofficial work undertaken to provide support for users.

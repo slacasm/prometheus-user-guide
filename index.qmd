@@ -1,9 +1,5 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is a work in progress. Do not rely on this for official use. This is a work in progress.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
-```
+There may be errors and incorrect references in this project. Use at your own risk. This is a work in progress.

@@ -2,13 +2,16 @@ project:
   type: book
 
 book:
-  title: "prometheus-user-guide"
+  title: "Prometheus: Unofficial User Guide"
+  subtitle: ""
   author: "Sam LaCarte"
   date: "2026-03-14"
   chapters:
     - index.qmd
-    - intro.qmd
     - summary.qmd
+    - intro.qmd
+    - installation.qmd
+    - data-gathering-formatting.qmd
     - references.qmd
 
 bibliography: references.bib
