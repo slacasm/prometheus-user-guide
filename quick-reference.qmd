@@ -46,11 +46,9 @@ This section covers the creation of a weather station, adding a weather stream, 
             b.  The `From file...` option is the only option that functions properly at present. It is unlikely this will change given *Prometheus* is end of life.
             c.  Select the `From file...` option and navigate to your *Prometheus* weather file[^quick-reference-2] (See the *Formatting* section for further details if required).
         b.  `Add...` ![](images/clipboard-2670332447.png) enables the user to manually enter weather data to create either a `Daily` or `Hourly` weather stream directly.
-            a.  `Daily` option:
-                a.  `Days to apply` this is how many days will be applied to create the weather stream based on the chosen input data. You can create either multiple days at once using the same Min/Max data *or* individually create days one (or more) at a time by repeatedly using the `Add... Daily` option.
-                b.  Depending on how you've been provided your weather data, this may be the easiest option.
-            b.  `Hourly` option:
-                a.  You can manually input hour by hour weather to create an hourly weather stream through this option.
+            a.  `Daily` option: `Days to apply` this is how many days will be applied to create the weather stream based on the chosen input data. You can create either multiple days at once using the same Min/Max data *or* individually create days one (or more) at a time by repeatedly using the `Add... Daily` option.
+            b.  Depending on how you've been provided your weather data, this may be the easiest option.
+            c.  `Hourly` option: You can manually input hour by hour weather to create an hourly weather stream through this option.
         c.  Once you have created or imported your weather stream, you can view it in the `Weather Conditions` table that is displayed in the `Weather Stream` dialogue box. Click `OK` once weather is properly added.
 4.  Ignition Data Import and Creation
     i.  Under the `Components` tab, right-click the `Ignitions` folder
