@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>References – Prometheus: Unofficial User Guide</title>
+<title>2&nbsp; Quick Start – Prometheus: Unofficial User Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,26 +23,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -52,7 +33,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./data-gathering-formatting.html" rel="prev">
+<link href="./intro.html" rel="next">
+<link href="./summary.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -103,7 +85,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./quick-reference.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quick Start</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -142,7 +124,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quick-reference.html" class="sidebar-item-text sidebar-link">
+  <a href="./quick-reference.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quick Start</span></span></a>
   </div>
 </li>
@@ -166,7 +148,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -175,15 +157,23 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#initial-set-up" id="toc-initial-set-up" class="nav-link active" data-scroll-target="#initial-set-up"><span class="header-section-number">2.1</span> Initial Set-up</a></li>
+  <li><a href="#weather-ignition-data" id="toc-weather-ignition-data" class="nav-link" data-scroll-target="#weather-ignition-data"><span class="header-section-number">2.2</span> Weather &amp; Ignition Data</a></li>
+  <li><a href="#scenario-set-up" id="toc-scenario-set-up" class="nav-link" data-scroll-target="#scenario-set-up"><span class="header-section-number">2.3</span> Scenario Set-up</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quick Start</span></h1>
 </div>
 
 
@@ -200,11 +190,176 @@ div.csl-indent {
 </header>
 
 
-<div id="refs" role="list" style="display: none">
+<p>This section is intended for quick reference on the steps required to initiate a new <em>Prometheus</em> project through to the outputs. This section assumes you already have properly formatted input data.</p>
+<section id="initial-set-up" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="initial-set-up"><span class="header-section-number">2.1</span> Initial Set-up</h2>
+<p>This section covers the basic creation of a <em>Prometheus</em> project.</p>
+<ol type="1">
+<li>Open <em>Prometheus</em>.</li>
+<li>Select either the <code>New</code> <img src="images/clipboard-1849000672.png" class="img-fluid"> button or <code>File -&gt; New...</code></li>
+<li>The New Project Wizard will open a dialogue box with various options. The <code>National default</code> is already pre-loaded for the Fuel Types.</li>
+<li>Click the <code>Next &gt;</code> <img src="images/clipboard-3355883437.png" class="img-fluid"> button.</li>
+<li>This page will display options to input a <code>Fuel Type File</code> and an optional <code>Elevation File</code>. Select <code>Browse ...</code> and navigate to the location of your Fuel type file (and Elevation, if desired).
+<ol type="i">
+<li>Note: format must be either ASCII (.asc), GeoTIFF (.tif, .tiff), or text (.txt).</li>
+<li>Note: <code>NoData</code> <strong><em>must</em></strong> be set to <code>-9999</code> in the Fuel type file otherwise <em>Prometheus</em> will not load the fuel file.</li>
+</ol></li>
+<li>Click the <code>Finish</code> button and <em>Prometheus</em> will load in the data and initiate a new project.</li>
+<li>At this point, you should visually see the chosen Fuel Type layer displayed in <em>Prometheus’</em> map view.</li>
+<li>A <code>Components</code> window should be visible with a series of <code>Folder</code> icons <img src="images/clipboard-3374271492.png" class="img-fluid">.
+<ol type="i">
+<li>Expand the Fuel Types folder to see the Fuel Types included in your layer and the associated colour mapping.</li>
+</ol></li>
+<li>Save your project at this step, using either the <code>Save</code> <img src="images/clipboard-3684976503.png" class="img-fluid"> button, <code>File -&gt; Save As..</code>, or keyboard command <code>Ctrl + S</code></li>
+</ol>
+</section>
+<section id="weather-ignition-data" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="weather-ignition-data"><span class="header-section-number">2.2</span> Weather &amp; Ignition Data</h2>
+<p>This section covers the creation of a weather station, adding a weather stream, importing an ignition file, and manually drawing an ignition.</p>
+<ol type="1">
+<li>Under the <code>Components</code> tab, right-click the <code>Weather Stations</code> folder and click the <code>Add ...</code> option.
+<ol type="i">
+<li>A dialogue box will open.</li>
+<li>Name your <code>Weather Station</code>.</li>
+<li>Select your units under the <code>Location</code> section for the coordinates of your weather station.
+<ol type="a">
+<li>Input your coordinates. Be sure to maintain the degree symbol (°<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>) and/or the backtick (’)</li>
+</ol></li>
+<li>If you have input an <code>Elevation</code> grid and your <code>Weather Station</code> is located on the grid, the <code>Elevation</code> option will automatically calculate.
+<ol type="a">
+<li>If your station is <strong>not</strong> on the grid or you did <strong>not</strong> provide an <code>Elevation</code> grid, the user can input the station elevation directly.</li>
+</ol></li>
+<li>Select a display symbol, colour, and size if desired. Default is a size 3, blue circle.</li>
+<li>Enter comments if desired. Otherwise, click the <code>OK</code> button to create the station.</li>
+</ol></li>
+<li>Save the project at this step.</li>
+<li>In the <code>Components</code> menu, expand the <code>Weather Stations</code> folder. The created station should be present here. Right-click the station and select the <code>Add Weather Stream...</code> option.
+<ol type="i">
+<li>A dialogue box will open, the top will display some title based on your weather station such as <code>Weather Stream -Station</code>.</li>
+<li>Enter a name for the <code>Weather Stream</code>, such as <code>Pine Station - RDPS - June 13-18-2020</code> to reflect the date, source of weather stream, and associated station.</li>
+<li>Enter the <code>Starting Codes</code> obtained from <code>Daily FWI</code> in the relevant fields. The default in <em>Prometheus</em> will be <code>FFMC = 85</code>, <code>DMC = 6</code>, and <code>DC = 15</code>. These would reflect standard station-start up codes at the beginning of a season and must be adjusted to reflect your data.
+<ol type="a">
+<li>If you do not have a formatted weather file with the correct fields, then set the correct <code>Start Date</code> in the upper right corner at this time.</li>
+<li>If you have a formatted weather file, you can leave the <code>Start Date</code> alone as this will automatically adjust to your weather file datestamp.</li>
+</ol></li>
+<li>Select your preferred method for <code>Hourly FFMC Calculation</code>.</li>
+<li>Three primary options exist to create or import a weather stream at this stage.
+<ol type="a">
+<li><code>Import Weather...</code> <img src="images/clipboard-3873637986.png" class="img-fluid">
+<ol type="a">
+<li>Two options are possible here, <code>From file...</code> and <code>From ensemble...</code></li>
+<li>The <code>From file...</code> option is the only option that functions properly at present. It is unlikely this will change given <em>Prometheus</em> is end of life.</li>
+<li>Select the <code>From file...</code> option and navigate to your <em>Prometheus</em> weather file<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (See the <em>Formatting</em> section for further details if required).</li>
+</ol></li>
+<li><code>Add...</code> <img src="images/clipboard-2670332447.png" class="img-fluid"> enables the user to manually enter weather data to create either a <code>Daily</code> or <code>Hourly</code> weather stream directly.
+<ol type="a">
+<li><code>Daily</code> option: <code>Days to apply</code> this is how many days will be applied to create the weather stream based on the chosen input data. You can create either multiple days at once using the same Min/Max data <em>or</em> individually create days one (or more) at a time by repeatedly using the <code>Add... Daily</code> option.</li>
+<li>Depending on how you’ve been provided your weather data, this may be the easiest option.</li>
+<li><code>Hourly</code> option: You can manually input hour by hour weather to create an hourly weather stream through this option.</li>
+</ol></li>
+<li>Once you have created or imported your weather stream, you can view it in the <code>Weather Conditions</code> table that is displayed in the <code>Weather Stream</code> dialogue box. Click <code>OK</code> once weather is properly added.</li>
+</ol></li>
+</ol></li>
+<li>Ignition Data Import and Creation
+<ol type="i">
+<li>Under the <code>Components</code> tab, right-click the <code>Ignitions</code> folder</li>
+<li><img src="images/clipboard-478008996.png" class="img-fluid"> <code>Add</code> enables the user to manually draw either a point, line, or polygon ignition directly in <em>Prometheus.</em> <code>Import...</code> allows the user to add an ignition file directly to the project that has been obtained / created elsewhere.</li>
+<li>If <code>Add</code> is used, select your desired ignition type:
+<ol type="a">
+<li><code>Point</code> ignition will start your fire growth from a specific point (or points) on the landscape.
+<ol type="1">
+<li>To add the <code>Point</code> left-click on a location in the map window and a red dot will appear.</li>
+<li>You can add as many or as few points as desired throughout the grid.</li>
+<li>Double left-click to finalize the points. A dialogue box will open.</li>
+<li>Name the ignition and set a start-time. Be specific with the start-time as this is a necessary component in conjunction with your weather stream.</li>
+</ol></li>
+<li><code>Line</code> ignition will start your fire growth along the drawn line(s).
+<ol type="1">
+<li>To add the <code>Line</code> ignition, left-click on an area of the map and then move your cursor to where you want the line segment to end. Either double left-click to finalize this line ignition or single left-click to start a new segment line.</li>
+<li>A dialogue box will open. Name the ignition and mind the start-time.</li>
+</ol></li>
+<li><code>Polygon</code> ignition will start your fire growth along the <em>exterior</em> of the drawn polygon.
+<ol type="1">
+<li>Similar to the <code>Line</code> ignition above but you will need to finalize the connection of your last segment to the starting segment to create the polygon.</li>
+<li>Name the ignition and mind the start-time.</li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li>Save your project.</li>
+</ol>
+</section>
+<section id="scenario-set-up" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="scenario-set-up"><span class="header-section-number">2.3</span> Scenario Set-up</h2>
+<p>This section covers setting up a <code>Scenario</code> from which to produce a fire growth model output.</p>
+<ol type="1">
+<li>Under the <code>Components</code> menu, select the <code>Scenarios</code> folder. An initial scenario will already exist in most cases. Either edit this or create a new scenario.</li>
+<li>A <code>Scenario</code> dialogue box will open with multiple tabs and windows within it.
+<ol type="i">
+<li><code>Scenario Inputs</code> is the main tab.
+<ol type="a">
+<li>Set the <code>Start Time:</code> and <code>End Time:</code> for your scenario. These should reflect the correct dates and times you wish to simulate, i.e.&nbsp;<code>June 1, 2020 11:00</code> to <code>June 6, 2020 22:00</code></li>
+<li>In the <code>Ignitions</code> window, use the check box to select the ignitions you wish to model. You can add more than one.</li>
+<li>If you have added <code>Fuel Breaks</code> you can activate those here.</li>
+<li>If you have added <code>Grid and Patches</code> you can activate those here at your discretion.</li>
+<li>Select your <code>Weather Stream</code>. We will return to this.</li>
+</ol></li>
+<li><code>Burning Conditions</code> tab offers the user the ability to set under what conditions a fire can grow in the model.
+<ol type="a">
+<li>The amount of rows will correspond to the total number of days you added in the above <code>Start Time:</code> and <code>End Time:</code> options (in our example, there would be six rows)</li>
+<li><code>Start Time</code> under the <code>Burning Conditions</code> tab refers to the time at which a fire is enabled to spread on a given day.</li>
+<li><code>End Time</code> under the <code>Burning Conditions</code> tab refers to the latest time at which a fire is enabled to spread on a given day.</li>
+<li><code>HISI &gt;</code> allows a user to define a threshold for <code>Initial Spread Index</code> at which a fire will begin spreading.
+<ol type="a">
+<li>For example, <code>HISI &gt;</code> set to a value of 5 means that a fire will <em>not</em> grow under any circumstances where the Hourly Initial Spread Index (<code>HISI</code>) is below 5.</li>
+</ol></li>
+<li><code>HFWI &gt;</code> allows a user to define a threshold for <code>Fire Weather Index</code> at which a fire will begin spreading.
+<ol type="a">
+<li>For example, <code>HFWI &gt;</code> set to a value of 15 means that a fire will <em>not</em> grow under any circumstances where the Hourly Initial Spread Index (<code>HFWI</code>) is below 15.</li>
+</ol></li>
+<li><code>WS &gt;</code> allows a user to define a threshold for <code>Wind Speed</code> at which a fire will begin spreading.
+<ol type="a">
+<li>For example, <code>WS &gt;</code> set to a value of 10 means that a fire will <em>not</em> grow under any circumstance when the <code>Wind Speed</code> is less than 10km/hr.</li>
+</ol></li>
+<li><code>RH &lt;</code> allows a user to define a threshold for <code>Relative Humidity</code>, at which a fire will begin spreading.
+<ol type="a">
+<li>For example, <code>RH &lt;</code> set to a value of 60 means that a fire will <em>not</em> grow unless the <code>Relative Humidity</code> is lower than 60.</li>
+</ol></li>
+</ol></li>
+<li><code>Fire Weather</code> tab offers the user the option to interpolate <code>Fire Weather</code> spatially. Three options exist. If you enable <code>Fire Weather Interpolation</code> you will need to return to <code>Scenario Inputs</code> tab and identify a primary weather stream.</li>
+<li><code>Fire Behaviour</code> tab provides several options to refine various fire behaviour aspects.
+<ol type="i">
+<li><code>FMC (%) override:</code> this adjusts the Foliar Moisture Content threshold.</li>
+<li><code>Terrain effect</code> tells <em>Prometheus</em> to consider topography provided for wind.</li>
+<li><code>Breaching</code> enables fire to breach <code>Fuel Breaks</code> if enabled and a fuel break is provided.</li>
+<li><code>Spotting</code> does nothing and should not be available to enable/disable.</li>
+<li><code>Percentile rate of spread:</code> ???</li>
+<li><code>Green-up</code> allows the user to set the <code>Start Date:</code> and <code>End Date</code> periods for where the model should use the <code>Green</code> fuel type models.</li>
+<li><code>Standing Grass</code> allows the user to set the <code>Start Date</code> and <code>End Date</code> for where the model should use <code>Standing</code> versus <code>Matted</code> grass models.</li>
+<li><code>Grass Curing</code> section allows a user to set the <code>Degree of Curing (%)</code> across the grid. It further enables the user to dynamically set dates for curing over time.</li>
+</ol></li>
+<li><code>Propagation</code> tab provides several additional options that affect model performance and outputs.
+<ol type="i">
+<li><code>Display interval</code> will default to <code>01:00:00</code> but this can be adjusted at the user discretion. an interval of <code>01:00:00</code> will display fire growth every hour. Can be lowered or increased depending on desire.</li>
+<li><code>Maximum time step during acceleration:</code> defaults to <code>00:02:00</code> which is a two-minute interval time step. This is rarely needed to be adjusted.</li>
+<li><code>Stop fire spread at data boundary</code> will stop your fire from “spreading” beyond the extent of the fuel data.</li>
+<li><code>Purge non-displayable time steps</code> ???</li>
+<li><code>Fire may grow with independent time steps</code> useful for when you have multiple ignitions in one scenario.</li>
+</ol></li>
+<li>Once all settings are set and verified, click <code>OK</code>.</li>
+<li>Save your project.</li>
+<li>You are now ready to <code>Run</code> the model!</li>
+</ol></li>
+</ol>
 
-</div>
 
-
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Hold the Alt key and type 0176 (Alt + 0176) to type the Degree symbol<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The most common method to obtain real-time weather files for usage in <em>Prometheus</em> is through the use of spotwx.com. You can directly obtain <em>Prometheus</em> formatted input files for many weather models here.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -609,11 +764,14 @@ div.csl-indent {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./data-gathering-formatting.html" class="pagination-link" aria-label="Input Data: Gathering and Formatting">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></span>
+      <a href="./summary.html" class="pagination-link" aria-label="Summary">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Summary</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

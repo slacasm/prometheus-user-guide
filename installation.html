@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Installation &amp; Set-up – Prometheus: Unofficial User Guide</title>
+<title>4&nbsp; Installation &amp; Set-up – Prometheus: Unofficial User Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installation.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,20 +124,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quick Start</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./installation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data-gathering-formatting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -156,9 +162,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#verify-path-settings" id="toc-verify-path-settings" class="nav-link active" data-scroll-target="#verify-path-settings"><span class="header-section-number">3.1</span> Verify Path Settings</a>
+  <li><a href="#verify-path-settings" id="toc-verify-path-settings" class="nav-link active" data-scroll-target="#verify-path-settings"><span class="header-section-number">4.1</span> Verify Path Settings</a>
   <ul class="collapse">
-  <li><a href="#troubleshooting-paths" id="toc-troubleshooting-paths" class="nav-link" data-scroll-target="#troubleshooting-paths"><span class="header-section-number">3.1.1</span> Troubleshooting Paths</a></li>
+  <li><a href="#troubleshooting-paths" id="toc-troubleshooting-paths" class="nav-link" data-scroll-target="#troubleshooting-paths"><span class="header-section-number">4.1.1</span> Troubleshooting Paths</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -168,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></h1>
 </div>
 
 
@@ -192,8 +198,8 @@ ul.task-list li input[type="checkbox"] {
 <p><em>Prometheus</em> requires a specific <strong>Intel Redist version<em>.</em></strong> The software will not be installed without this and the user is required to ensure this is present on their machine. The correct version can be found on the firegrowthmodel.ca website currently. The required file is <strong>Intel C++ runtime 2021.3.0.3372.</strong></p>
 <p>This is a hard requirement. You cannot bypass this requirement and run <em>Prometheus</em>.</p>
 <p>During installation of <em>Prometheus,</em> if either requirement is not found, the installation will not continue. It is also suggested that the user reboot their computer <em>after</em> installation of both the Java and Intel components and prior to completing <em>Prometheus</em> installation.</p>
-<section id="verify-path-settings" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="verify-path-settings"><span class="header-section-number">3.1</span> Verify Path Settings</h2>
+<section id="verify-path-settings" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="verify-path-settings"><span class="header-section-number">4.1</span> Verify Path Settings</h2>
 <p>Post-installation, check and verify what path has been set for the <em>Prometheus</em> software. <em>Prometheus</em> has known conflicts, notably with other installations of GDAL, which can lead to frustrating and unclear issues. On a Windows machine, press the Windows key or the Windows icon to open the search bar. Type,<br>
 “Environment” and two options should populate, “<em>Edit the system environment variables.”</em> or <em>“Edit environment variables for your account.”</em></p>
 <p>Administrative privileges may be required depending on your user/corporate settings to view and edit environment variables. You should see a window similar to this,</p>
@@ -205,8 +211,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Verify that this is correctly set. Next, search in the same list for the <em>Variable</em> <code>PROJ_LIB</code>. The <em>Value</em> should be similar to,</p>
 <p><code>C:\Program Files\Prometheus\proj_nad\</code></p>
 <p>Verify that this is correctly set. If so, <em>Prometheus</em> should be ready for usage.</p>
-<section id="troubleshooting-paths" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="troubleshooting-paths"><span class="header-section-number">3.1.1</span> Troubleshooting Paths</h3>
+<section id="troubleshooting-paths" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="troubleshooting-paths"><span class="header-section-number">4.1.1</span> Troubleshooting Paths</h3>
 <p>In some cases, both <code>GDAL_DATA</code> and <code>PROJ_LIB</code> may point to other paths, such as an <code>OSGEO</code> installation as a part of QGIS. In order to properly utilize both <em>Prometheus</em> and other spatial software, the user may occasionally be required to re-direct the path destination directly. If either <code>GDAL_DATA</code> or <code>PROJ_LIB</code> are elsewhere, we recommend you copy those locations to a separate text file for future use and update them to be the required <em>Prometheus</em> paths noted above (ensure your directories are aligned).</p>
 
 
@@ -623,12 +629,12 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./data-gathering-formatting.html" class="pagination-link" aria-label="Input Data: Gathering and Formatting">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

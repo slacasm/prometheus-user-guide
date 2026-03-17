@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Input Data: Gathering and Formatting – Prometheus: Unofficial User Guide</title>
+<title>5&nbsp; Input Data: Gathering and Formatting – Prometheus: Unofficial User Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data-gathering-formatting.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data-gathering-formatting.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,20 +124,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Quick Start</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./installation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data-gathering-formatting.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -156,9 +162,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#fuel-data" id="toc-fuel-data" class="nav-link active" data-scroll-target="#fuel-data"><span class="header-section-number">4.1</span> Fuel Data</a>
+  <li><a href="#fuel-data" id="toc-fuel-data" class="nav-link active" data-scroll-target="#fuel-data"><span class="header-section-number">5.1</span> Fuel Data</a>
   <ul class="collapse">
-  <li><a href="#obtaining-fuel-data-via-r" id="toc-obtaining-fuel-data-via-r" class="nav-link" data-scroll-target="#obtaining-fuel-data-via-r"><span class="header-section-number">4.1.1</span> Obtaining Fuel Data via R</a></li>
+  <li><a href="#obtaining-fuel-data-via-r" id="toc-obtaining-fuel-data-via-r" class="nav-link" data-scroll-target="#obtaining-fuel-data-via-r"><span class="header-section-number">5.1.1</span> Obtaining Fuel Data via R</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -168,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Input Data: Gathering and Formatting</span></h1>
 </div>
 
 
@@ -256,11 +262,11 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>At an absolute minimum, <em>Prometheus</em> requires a raster Fire Behaviour Prediction (FBP) Fuel Type (FT) input layer (we will use the term fuel layer from here out). Three file formats are accepted for raster data in <em>Prometheus:</em> GeoTIFF (.tif, .tiff), ASCII (.asc), and text (.txt). The most common file type that users will encounter is a standard GeoTIFF, which is the most common raster format in present geospatial usage. There are several options to obtain or create a fuel layer for usage in <em>Prometheus.</em> Some specific requirements must be met otherwise the layer will not be imported correctly.</p>
 <p>Throughout the next sections, we will describe how to obtain and format data for usage in <em>Prometheus.</em></p>
-<section id="fuel-data" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="fuel-data"><span class="header-section-number">4.1</span> Fuel Data</h2>
+<section id="fuel-data" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="fuel-data"><span class="header-section-number">5.1</span> Fuel Data</h2>
 <p>Obtaining fuel data for <em>Prometheus</em> is currently easier and more accessible than ever, though this data is not always the best available due to a variety of challenges and limitations. The Canadian Forest Service (CFS) produces a national Fire Behaviour Prediction (FBP) Fuel Type (FT) layer for all of Canada, which is what we will cover in this section. This layer is based on remotely sensed data and is developed through a rule-set application to attempt to best reflect expected fire behaviour in Canada. Other fuel type datasets exist but are often not easily accessible. The basic concepts covered in this section will apply for the creation and usage of other fuel type data where a user may have it available.</p>
-<section id="obtaining-fuel-data-via-r" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="obtaining-fuel-data-via-r"><span class="header-section-number">4.1.1</span> Obtaining Fuel Data via R</h3>
+<section id="obtaining-fuel-data-via-r" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="obtaining-fuel-data-via-r"><span class="header-section-number">5.1.1</span> Obtaining Fuel Data via R</h3>
 
 
 </section>
@@ -670,7 +676,7 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./installation.html" class="pagination-link" aria-label="Installation &amp; Set-up">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Installation &amp; Set-up</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
